@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "./components/Header"; 
 import { ReactNode } from "react";
+import Sidebar from "./components/Sidebar";
 
 export const metadata = {
     title: "Nick Sheward — Personal Website",
@@ -11,8 +12,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
             <body>
-                <Header />
-                <main>{children}</main>
+                <Sidebar />
+                <div className="main-container">
+                    <Header />
+                    <main>{children}</main>
+                </div>
             </body>
         </html>
     );
