@@ -17,7 +17,7 @@ export default function HomePage() {
                     <li>Former Product Manager — with a strong customer a business focus</li>
                 </ul>
 
-                <Link href="/about" className={styles.ctaButton}><img src="/list.png" alt="About me icon" className={styles.headerIcons}/>About Me</Link>
+                <Link href="pages/about" className={styles.ctaButton}><img src="/list.png" alt="About me icon" className={styles.headerIcons}/>About Me</Link>
             </div>
             <div>
                 <img src="/ghibli-me.png" alt="AI generated image of me in Studio Ghibli style" className={styles.homePageImage}/>
