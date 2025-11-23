@@ -9,18 +9,6 @@ body {
     color: #222;
 }
 
-aside {
-    width: 100px;
-    background: #333;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1rem;
-}
-
 header {
     background: #222;
     padding: 1rem;
@@ -50,8 +38,3 @@ main {
     justify-content: center;
 }
 
-.icons {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-}

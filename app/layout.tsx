@@ -1,7 +1,7 @@
 import "./globals.css";
-import Header from "./components/Header"; 
+import Header from "./components/Header/Header"; 
 import { ReactNode } from "react";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 export const metadata = {
     title: "Nick Sheward — Personal Website",
