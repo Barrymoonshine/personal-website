@@ -8,14 +8,12 @@ export default function HomePage() {
                 <h1 className={styles.heroHeading}>Hey, I’m Nick!</h1>
 
                 <p className={styles.lead}>
-                    I'm a self taught Software Engineer based in Bristol UK and a former Product Manager. Some of my skills include:
-                </p>
+                    I'm a backend-focused Software Engineer based in Bristol, UK.
+               </p>
 
-                <ul className={styles.skillsList}>
-                    <li>Experienced across the full stack, with a focus on backend development</li>
-                    <li>AWS &amp; MongoDB qualified</li>
-                    <li>sjjsjj</li>
-                </ul>
+                <p className={styles.lead}>
+                    I like designing and building scalable applications which solve real-world problems.
+               </p>
 
                 <Link href="pages/about" className={styles.ctaButton}><img src="/list.png" alt="About me icon" className={styles.headerIcons}/>About Me</Link>
             </div>
