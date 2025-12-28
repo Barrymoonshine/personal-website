@@ -12,9 +12,9 @@ export default function HomePage() {
                 </p>
 
                 <ul className={styles.skillsList}>
-                    <li>Experienced across the full stack, backend leaning</li>
+                    <li>Experienced across the full stack, with a focus on backend development</li>
                     <li>AWS &amp; MongoDB qualified</li>
-                    <li>Former Product Manager — with a strong customer a business focus</li>
+                    <li>sjjsjj</li>
                 </ul>
 
                 <Link href="pages/about" className={styles.ctaButton}><img src="/list.png" alt="About me icon" className={styles.headerIcons}/>About Me</Link>

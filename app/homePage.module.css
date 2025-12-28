@@ -28,13 +28,11 @@
 
 .lead {
     margin: 0 0 16px;
-    color: #222;
     line-height: 1.5;
 }
 
 .skillsList {
     margin: 0 0 20px 20px;
-    color: #333;
     line-height: 1.45;
     list-style: disc;
     padding-left: 0;
@@ -44,7 +42,6 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    color: #222;
     border: 2px solid #222;
     padding: 10px 16px;
     border-radius: 8px;

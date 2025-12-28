@@ -3,7 +3,8 @@ export default function CVPage() {
         <div>
             <h1>My CV</h1>
             <p>
-                Download my CV
+                TODO: Add link to CV  
+                Download my CV <a href="/Nick_Sheward_CV.pdf" download>here</a>.
             </p>
         </div>
     );

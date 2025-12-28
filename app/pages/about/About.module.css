@@ -1,0 +1,10 @@
+.aboutContainer {
+    height: 100vh;
+    max-width: 800px;
+}
+
+.meImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}

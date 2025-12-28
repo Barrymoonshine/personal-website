@@ -5,8 +5,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #222;
 }
 
 .main-container {
@@ -21,3 +19,35 @@ main {
     justify-content: center;
 }
 
+:root {
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #666;
+  --toggle-foreground: #0b1220;
+}
+
+.theme-dark {
+  --bg: #0b1220;
+  --text: #ffffff;
+  --muted: #9aa3b2;
+  --toggle-foreground: #ffffff;
+}
+
+.theme-light {
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #666;
+  --toggle-foreground: #0b1220;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+a, button {
+  color: inherit;
+  background: none;
+}

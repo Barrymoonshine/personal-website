@@ -1,5 +1,5 @@
 .asideContainer {
-    width: 30px;
+    width: 60px;
     color: white;
     padding: 1rem;
     display: flex;
@@ -8,21 +8,10 @@
     flex-direction: column;
 }
 
-.homeIcon {
-    display: inline-flex;
-    align-items: center;
+.topSection {
+    display: flex;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    background-color: #0a3d62; 
-    color: #ffffff;
-    border-radius: 9999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 5px;
+    align-items: center;
 }
 
 .sidebarIcons {
@@ -38,4 +27,46 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.toggleButton {
+    --size: 36px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 9999px;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--toggle-foreground, #fff);
+}
+
+.toggleIcon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.toggleIcon svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 220ms ease, transform 220ms ease;
+    transform-origin: center;
+}
+
+.iconVisible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.iconHidden {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.92);
+    pointer-events: none;
 }
