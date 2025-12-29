@@ -8,7 +8,7 @@ export default function HomePage() {
                 <h1 className={styles.heroHeading}>Hey, I’m Nick!</h1>
 
                 <p className={styles.lead}>
-                    I'm a backend-focused Software Engineer based in Bristol, UK.
+                    I'm a backend-leaning Software Engineer based in Bristol, UK.
                </p>
 
                 <p className={styles.lead}>

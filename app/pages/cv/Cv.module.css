@@ -1,0 +1,113 @@
+.formContainer {
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 24px;
+    background: var(--card-bg, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(10, 12, 20, 0.06);
+    color: var(--text, #0b1220);
+}
+
+.formHeading {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    color: #0b1220;
+}
+
+.formSub {
+    margin: 0 0 18px;
+    color: var(--muted, #6b7280);
+    font-size: 0.95rem;
+    color: #0b1220;
+}
+
+.subFromContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formLabel {
+    font-size: 0.9rem;
+    color: var(--muted, #374151);
+    font-weight: 600;
+}
+
+.input, .textarea {
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: inherit;
+    background: transparent;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+    box-shadow: none;
+    color: black;
+}
+
+.input:focus, .textarea:focus {
+    outline: none;
+    border-color: #0a3d62;
+    box-shadow: 0 6px 20px rgba(10, 61, 98, 0.06);
+    transform: translateY(-1px);
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.error {
+    color: #b91c1c;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.submitButton {
+    background-color: #0a3d62;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.98rem;
+    transition: transform 120ms ease, opacity 120ms ease, box-shadow 120ms ease;
+}
+
+.submitButton:hover {
+    opacity: 0.98;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.08);
+}
+
+.submitButton:active {
+    transform: translateY(0);
+}
+
+.helperText {
+    font-size: 0.85rem;
+    color: var(--muted, #6b7280);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .formContainer {
+        margin: 16px;
+        padding: 18px;
+    }
+}
