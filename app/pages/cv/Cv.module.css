@@ -11,14 +11,13 @@
 .formHeading {
     margin: 0 0 8px;
     font-size: 1.25rem;
-    color: #0b1220;
+    color: var(--muted, #374151);
 }
 
 .formSub {
     margin: 0 0 18px;
-    color: var(--muted, #6b7280);
     font-size: 0.95rem;
-    color: #0b1220;
+    color: var(--muted, #374151);
 }
 
 .subFromContainer {
