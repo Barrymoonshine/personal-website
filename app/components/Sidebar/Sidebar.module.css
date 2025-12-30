@@ -70,3 +70,16 @@
     transform: translateY(-6px) scale(0.92);
     pointer-events: none;
 }
+
+@media (max-width: 650px) {
+.topSection {
+    width: 5px;
+    gap: 5px;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+}

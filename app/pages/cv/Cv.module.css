@@ -5,19 +5,19 @@
     background: var(--card-bg, #ffffff);
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(10, 12, 20, 0.06);
-    color: var(--text, #0b1220);
+    color: #000000;
 }
 
 .formHeading {
     margin: 0 0 8px;
     font-size: 1.25rem;
-    color: var(--muted, #374151);
+    color: #000000;
 }
 
 .formSub {
     margin: 0 0 18px;
     font-size: 0.95rem;
-    color: var(--muted, #374151);
+    color: #000000;
 }
 
 .subFromContainer {
@@ -34,7 +34,7 @@
 
 .formLabel {
     font-size: 0.9rem;
-    color: var(--muted, #374151);
+    color: #000000;
     font-weight: 600;
 }
 

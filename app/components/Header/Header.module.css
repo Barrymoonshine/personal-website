@@ -39,9 +39,9 @@
 }
 
 .mobileMenu {
-    position: absolute;            /* position relative to .headerContainer */
-    top: 15px;                     /* height of header */
-    left: 100px;
+    position: absolute;            
+    top: 15px;                 
+    left: 75px;
     z-index: 1000;          
     max-width: 320px;
     background: var(--bg);

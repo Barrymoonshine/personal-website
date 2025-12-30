@@ -60,3 +60,19 @@
     cursor: pointer;
     margin-right: 8px;
 }
+
+
+@media (max-width: 650px) {
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-top: 60px;
+    max-width: 800px;
+}
+
+.homePageImage {
+    display: none;
+}
+}
