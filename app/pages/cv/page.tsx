@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./Cv.module.css";
 
@@ -11,22 +11,47 @@ type FormValues = {
 };
 
 export default function CVPage() {
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
-    } = useForm<FormValues>();
+    const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormValues>();
+    const [message, setMessage] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
-    const onSubmit = (data: FormValues) => {
-        const subject = `Website contact from ${data.name}`;
-        const body = `Name: ${data.name}\nCompany: ${data.company}\n\nComments:\n${data.comments ?? ""}`;
-        const mailto = `mailto:nickshwrd@gmail.com?subject=${encodeURIComponent(
-            subject
-        )}&body=${encodeURIComponent(body)}`;
+    const onSubmit = async (data: FormValues) => {
+        setMessage(null);
+        setError(null);
 
-        window.location.href = mailto;
-        reset();
+        // formsubmit AJAX endpoint
+        const endpoint = "https://formsubmit.co/ajax/nickshwrd@gmail.com";
+
+        // include FormSubmit hidden params
+        const payload = {
+            name: data.name,
+            company: data.company,
+            comments: data.comments ?? "",
+            _subject: `CV request from ${data.name}`,
+            _captcha: "false"
+        };
+
+        try {
+            const res = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    Accept: "application/json"
+                },
+                body: new URLSearchParams(payload).toString()
+            });
+
+            const json = await res.json().catch(() => ({}));
+            if (!res.ok) {
+                throw new Error(json?.message || `Failed (${res.status})`);
+            }
+
+            setMessage("Request sent — you'll receive a reply by email.");
+            reset();
+        } catch (err: any) {
+            console.error("Form submit error:", err);
+            setError("There was an error sending your request. Please try again later.");
+        }
     };
 
     return (
@@ -77,13 +102,18 @@ export default function CVPage() {
                         <button
                             type="submit"
                             className={styles.submitButton}
+                            disabled={isSubmitting}
                         >
-                            Request CV
+                            {isSubmitting ? "Sending…" : "Request CV"}
                         </button>
+
                         <div className={styles.helperText}>
-                            You will be taken to your email client to send the request.
+                            Your request will be sent securely from this site.
                         </div>
                     </div>
+
+                    {message && <div className={styles.helperText} role="status">{message}</div>}
+                    {error && <div className={styles.error} role="alert">{error}</div>}
                 </form>
             </section>
         </div>
