@@ -6,6 +6,7 @@ import styles from "./Cv.module.css";
 
 type FormValues = {
     name: string;
+    email: string;
     company: string;
     comments?: string;
 };
@@ -25,6 +26,7 @@ export default function CVPage() {
         // include FormSubmit hidden params
         const payload = {
             name: data.name,
+            email: data.email,
             company: data.company,
             comments: data.comments ?? "",
             _subject: `CV request from ${data.name}`,
@@ -68,6 +70,7 @@ export default function CVPage() {
                         <input
                             id="name"
                             className={styles.input}
+                            placeholder="Your name"
                             {...register("name", { required: "Name is required" })}
                             type="text"
                         />
@@ -77,10 +80,31 @@ export default function CVPage() {
                     </div>
 
                     <div className={styles.inputGroup}>
+                        <label className={styles.formLabel} htmlFor="email">Email</label>
+                        <input
+                            id="email"
+                            className={styles.input}
+                            placeholder="example@email.com"
+                            {...register("email", {
+                                required: "Email is required",
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: "Enter a valid email address"
+                                }
+                            })}
+                            type="email"
+                        />
+                        {errors.email && (
+                            <div className={styles.error}>{errors.email.message}</div>
+                        )}
+                    </div>
+
+                    <div className={styles.inputGroup}>
                         <label className={styles.formLabel} htmlFor="company">Company</label>
                         <input
                             id="company"
                             className={styles.input}
+                            placeholder="Your company"
                             {...register("company", { required: "Company is required" })}
                             type="text"
                         />
@@ -94,6 +118,7 @@ export default function CVPage() {
                         <textarea
                             id="comments"
                             className={styles.textarea}
+                            placeholder="Your comments"
                             {...register("comments")}
                         />
                     </div>

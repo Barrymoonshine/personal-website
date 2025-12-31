@@ -41,7 +41,7 @@
 .mobileMenu {
     position: absolute;            
     top: 15px;                 
-    left: 75px;
+    left: 85px;
     z-index: 1000;          
     max-width: 320px;
     background: var(--bg);
