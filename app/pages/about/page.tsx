@@ -19,7 +19,7 @@ export default function AboutPage() {
                          <p>
                             I'm always keen to contribute to projects which I think are important and find interesting, and happy to chat with others with similar interests. Please get in touch if you'd like more information about my experiences to date.
                         </p>
-                        <Link href="/cv" className={styles.ctaButton}>
+                        <Link href="/pages/cv" className={styles.ctaButton}>
                             <img src="/documents.png" alt="Documents icon" className={styles.headerIcons}/>
                             Request my CV
                         </Link>       
