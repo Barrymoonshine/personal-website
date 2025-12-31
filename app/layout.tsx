@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 
 export const metadata = {
     title: "Nick Sheward — Personal Website",
-    description: "Portfolio and personal site for Software Engineer Nick Sheward"
+    description: "Portfolio and personal site for Software Engineer Nick Sheward",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -20,4 +20,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </body>
         </html>
     );
-}
+} 
