@@ -12,6 +12,30 @@
     display: block;
 }
 
+.ctaButton {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 2px solid #222;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.ctaButton:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+}
+
+.headerIcons {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
 
 @media (max-width: 650px) {
 .aboutContainer {
